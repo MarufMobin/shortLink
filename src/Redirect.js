@@ -7,7 +7,6 @@ function Redirect() {
     console.log(slug)
     useEffect(() => {
         let query = db.collection('urls').where('slug', '==', slug)
-        console.log(query, "url Finding")
         query.onSnapshot((data)=>{
             if(data.empty){
                 alert('URL not found')

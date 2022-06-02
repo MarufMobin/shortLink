@@ -82,7 +82,7 @@ function Input() {
                             {
                                 users.map(( item, index )=> <tr key={index}>
                                     <td>{index}</td>
-                                    <td>{`${window.location.origin}/${item?.url}`}</td>
+                                    <td>{item?.url}</td>
                                     <td> <CopyText text={`${url}${item.slug}`} /> </td>
                                     <td><button onClick={ () => handleShortButton(item.id)} className="dtn btn-danger rounded-2">Delete</button></td>
                                     </tr>)
